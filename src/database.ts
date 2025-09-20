@@ -39,24 +39,27 @@ export class Database {
   }
 
   static initModels(sequelize: Sequelize) {
-    initAdvertiser(sequelize);
-    initAuthStorage(sequelize);
-    initCampaignInfo(sequelize);
-    initCampaignReview(sequelize);
-    initCampaignType(sequelize);
-    initCampaignTypeSp(sequelize);
-    initContractType(sequelize);
-    initCountry(sequelize);
-    initCreative(sequelize);
-    initCustomerType(sequelize);
-    initDeviceType(sequelize);
-    initEvent(sequelize);
-    initObjectiveType(sequelize);
-    initPurchaseType(sequelize);
-    initRequest(sequelize);
-    initRequestAssignment(sequelize);
-    initRequestStatus(sequelize);
-    initRole(sequelize);
-    initUser(sequelize);
+      // Inicialización de maestras
+      initRole(sequelize);
+      initAdvertiser(sequelize);
+      initAuthStorage(sequelize);
+      initPurchaseType(sequelize);
+      initCampaignType(sequelize);
+      initObjectiveType(sequelize);
+      initCampaignTypeSp(sequelize);
+      initContractType(sequelize);
+      initCustomerType(sequelize);
+      initDeviceType(sequelize);
+      initCountry(sequelize);
+      initRequestStatus(sequelize);
+
+      // Dependientes
+      initUser(sequelize);
+      initEvent(sequelize);
+      initRequestAssignment(sequelize);
+      initCreative(sequelize);
+      initCampaignInfo(sequelize);
+      initCampaignReview(sequelize);
+      initRequest(sequelize);
   }
 }
