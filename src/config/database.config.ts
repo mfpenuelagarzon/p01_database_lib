@@ -7,6 +7,7 @@ export interface DbConfig {
   username: string;
   password: string;
   database: string;
+  timezone: string;
 }
 
 export const createSequelize = (config: DbConfig): Sequelize => {
@@ -18,5 +19,6 @@ export const createSequelize = (config: DbConfig): Sequelize => {
     password: config.password,
     database: config.database,
     logging: false,
+    timezone: config.timezone,
   });
 };
