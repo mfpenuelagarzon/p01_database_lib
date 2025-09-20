@@ -1,5 +1,4 @@
 import { Model, Sequelize } from "sequelize";
-// import { sequelize } from "../config/sequelize";
 import { DatatableGenericFields } from "./generic/DatatableGenericFields";
 
 export class Advertiser extends Model {}

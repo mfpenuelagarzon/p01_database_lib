@@ -1,7 +1,13 @@
-import { Model } from "sequelize";
-import { sequelize } from "../config/sequelize";
+import {Model, Sequelize} from "sequelize";
 import { DatatableGenericFields } from "./generic/DatatableGenericFields";
 
 export class PurchaseType extends Model {}
 
-PurchaseType.init(DatatableGenericFields, { sequelize, modelName: 'PurchaseType',tableName: 'purchase_type', timestamps: false });
+export const initPurchaseType = (sequelize: Sequelize) => {
+    PurchaseType.init(DatatableGenericFields, {
+        sequelize,
+        modelName: 'PurchaseType',
+        tableName: 'purchase_type',
+        timestamps: false
+    });
+}
