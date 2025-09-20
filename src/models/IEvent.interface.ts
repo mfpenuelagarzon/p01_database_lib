@@ -1,0 +1,9 @@
+export interface IEvent {
+  id?: number;
+  origin: string;
+  milestone: string;
+  step: string;
+  payload: string;
+  created_at: Date;
+  user_id: number;
+}
