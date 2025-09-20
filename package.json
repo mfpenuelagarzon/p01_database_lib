@@ -1,14 +1,20 @@
 {
-  "name": "database-lib",
+  "name": "marketing-request-database-lib",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Librería interna para gestionar conexión y modelos de base de datos con Sequelize ORM & NodeJs + TS",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rmdir /s dist",
+    "build": "tsc",
+    "prepare": "npm run build"
   },
-  "keywords": [],
-  "author": "Felipe Garzon <felipegarxon@hotmail.com>",
+  "keywords": ["database", "orm", "sequelize", "typescript", "nodejs"],
+  "author": "Miguel Felipe Peñuela Garzón <mgarzonnaranjo@gmail.com>",
   "license": "MIT",
-  "description": "",
   "dependencies": {
     "mysql2": "^3.15.0",
     "sequelize": "^6.37.7",
@@ -18,5 +24,8 @@
     "@types/node": "^24.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
