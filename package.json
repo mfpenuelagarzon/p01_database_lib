@@ -1,6 +1,6 @@
 {
   "name": "marketing-request-database-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Librería interna para gestionar conexión y modelos de base de datos con Sequelize ORM & NodeJs + TS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,8 @@
   "scripts": {
     "clean": "rmdir /s dist",
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "publish": "npm publish --access public"
   },
   "keywords": ["database", "orm", "sequelize", "typescript", "nodejs"],
   "author": "Miguel Felipe Peñuela Garzón <mgarzonnaranjo@gmail.com>",
