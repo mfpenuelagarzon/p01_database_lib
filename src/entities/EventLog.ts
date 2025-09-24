@@ -1,10 +1,10 @@
 import {DataTypes, Model, Sequelize} from "sequelize";
 import { User } from "./User";
 
-export class Event extends Model {}
+export class EventLog extends Model {}
 
-export const initEvent = (sequelize: Sequelize) => {
-    Event.init({
+export const initEventLog = (sequelize: Sequelize) => {
+    EventLog.init({
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -35,7 +35,7 @@ export const initEvent = (sequelize: Sequelize) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         }
-    }, {sequelize, modelName: 'Event', tableName: 'event', timestamps: false});
+    }, {sequelize, modelName: 'EventLog', tableName: 'event_log', timestamps: false});
 
-    Event.belongsTo(User, {foreignKey: 'user_id', targetKey: 'id', as: 'User'});
+    EventLog.belongsTo(User, {foreignKey: 'user_id', targetKey: 'id', as: 'User'});
 }

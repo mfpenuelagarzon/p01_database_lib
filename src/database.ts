@@ -11,7 +11,7 @@ import { initCountry } from "./entities/Country";
 import { initCreative } from "./entities/Creative";
 import {initCustomerType} from "./entities/CustomerType";
 import {initDeviceType} from "./entities/DeviceType";
-import {initEvent} from "./entities/Event";
+import {initEventLog} from "./entities/EventLog";
 import {initObjectiveType} from "./entities/ObjectiveType";
 import {initPurchaseType} from "./entities/PurchaseType";
 import {initRequest} from "./entities/Request";
@@ -55,7 +55,7 @@ export class Database {
 
       // Dependientes
       initUser(sequelize);
-      initEvent(sequelize);
+      initEventLog(sequelize);
       initRequestAssignment(sequelize);
       initCreative(sequelize);
       initCampaignInfo(sequelize);

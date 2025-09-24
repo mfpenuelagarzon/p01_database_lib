@@ -9,7 +9,7 @@ export * from "./Country";
 export * from "./Creative";
 export * from "./CustomerType";
 export * from "./DeviceType";
-export * from "./Event";
+export * from "./EventLog";
 export * from "./ObjectiveType";
 export * from "./PurchaseType";
 export * from "./Request";

@@ -9,7 +9,7 @@ export * from "./ICountry.interface";
 export * from "./ICreative.interface";
 export * from "./ICustomerType.interface";
 export * from "./IDeviceType.interface";
-export * from "./IEvent.interface";
+export * from "./IEventLog.interface";
 export * from "./IObjectiveType.interface";
 export * from "./IPurchaseType.interface";
 export * from "./IRequest.interface";

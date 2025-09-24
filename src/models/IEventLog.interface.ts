@@ -1,4 +1,4 @@
-export interface IEvent {
+export interface IEventLog {
   id?: number;
   origin: string;
   milestone: string;
