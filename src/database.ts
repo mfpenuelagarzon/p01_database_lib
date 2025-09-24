@@ -9,16 +9,16 @@ import { initCampaignTypeSp } from "./entities/CampaignTypeSp";
 import { initContractType } from "./entities/ContractType";
 import { initCountry } from "./entities/Country";
 import { initCreative } from "./entities/Creative";
-import {initCustomerType} from "./entities/CustomerType";
-import {initDeviceType} from "./entities/DeviceType";
-import {initEventLog} from "./entities/EventLog";
-import {initObjectiveType} from "./entities/ObjectiveType";
-import {initPurchaseType} from "./entities/PurchaseType";
-import {initRequest} from "./entities/Request";
-import {initRequestAssignment} from "./entities/RequestAssignment";
-import {initRequestStatus} from "./entities/RequestStatus";
-import {initRole} from "./entities/Role";
-import {initUser} from "./entities/User";
+import { initCustomerType } from "./entities/CustomerType";
+import { initDeviceType } from "./entities/DeviceType";
+import { initEventLog } from "./entities/EventLog";
+import { initObjectiveType } from "./entities/ObjectiveType";
+import { initPurchaseType } from "./entities/PurchaseType";
+import { initRequest } from "./entities/Request";
+import { initRequestAssignment } from "./entities/RequestAssignment";
+import { initRequestStatus } from "./entities/RequestStatus";
+import { initRole } from "./entities/Role";
+import { initUser } from "./entities/User";
 
 export class Database {
   private static instance: Sequelize;
