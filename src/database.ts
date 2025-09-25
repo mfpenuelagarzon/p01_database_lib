@@ -23,9 +23,9 @@ import { initUser } from "./entities/User";
 export class Database {
   private static instance: Sequelize;
 
-  static init(config: DbConfig): Sequelize {
+  static init(config?: DbConfig): Sequelize {
     if (!Database.instance) {
-      Database.instance = createSequelize(config);
+        if (config) Database.instance = createSequelize(config);
     }
     return Database.instance;
   }

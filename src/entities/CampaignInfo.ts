@@ -27,11 +27,11 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
       allowNull: false,
     },
     from: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING(10),
       allowNull: false,
     },
     to: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING(10),
       allowNull: false,
     },
     campaign_type_id: {

@@ -1,4 +1,4 @@
-export {Op} from "sequelize";
+export {Op, Sequelize} from "sequelize";
 export { Database } from "./database";
 export * from "./models";
 export * from "./entities";
