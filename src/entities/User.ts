@@ -11,10 +11,6 @@ export const initUser = (sequelize: Sequelize) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    external_user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     role_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
