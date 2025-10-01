@@ -7,7 +7,6 @@ export interface IRequest {
   country_id: number;
   year: number;
   month: string;
-  fee: number;
   created_at: Date;
   updated_at: Date;
   request_status_id: number;

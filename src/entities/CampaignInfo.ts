@@ -46,12 +46,16 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    fee: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+    },
     budget: {
-      type: DataTypes.DOUBLE,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     kpi: {
-      type: DataTypes.DOUBLE,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     segmentation: {
@@ -64,6 +68,10 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
     },
     product: {
       type: DataTypes.STRING(80),
+      allowNull: false,
+    },
+    url: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     utm: {
