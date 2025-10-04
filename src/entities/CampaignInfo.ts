@@ -1,7 +1,6 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 import { CampaignType } from "./CampaignType";
 import { PurchaseType } from "./PurchaseType";
-import { ObjectiveType } from "./ObjectiveType";
 
 export class CampaignInfo extends Model {}
 
@@ -42,16 +41,16 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    objective_type_id: {
-      type: DataTypes.INTEGER,
+    fee: {
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     budget: {
-      type: DataTypes.DOUBLE,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     kpi: {
-      type: DataTypes.DOUBLE,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     segmentation: {
@@ -64,6 +63,10 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
     },
     product: {
       type: DataTypes.STRING(80),
+      allowNull: false,
+    },
+    url: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     utm: {
@@ -82,5 +85,4 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
 
   CampaignInfo.belongsTo(CampaignType, {foreignKey: 'campaign_type_id', targetKey: 'id', as: 'CampaignType'});
   CampaignInfo.belongsTo(PurchaseType, {foreignKey: 'purchase_type_id', targetKey: 'id', as: 'PurchaseType'});
-  CampaignInfo.belongsTo(ObjectiveType, {foreignKey: 'objective_type_id', targetKey: 'id', as: 'ObjectiveType'});
 }

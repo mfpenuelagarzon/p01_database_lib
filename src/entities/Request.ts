@@ -48,10 +48,6 @@ export const initRequest = (sequelize: Sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        fee: {
-            type: DataTypes.DECIMAL,
-            allowNull: false,
-        },
         created_at: {
             type: DataTypes.DATE,
             allowNull: false,
