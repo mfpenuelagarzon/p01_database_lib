@@ -16,3 +16,4 @@ export * from "./IRequestAssignment.interface";
 export * from "./IRequestStatus.interface";
 export * from "./IRole.interface";
 export * from "./IUser.interface";
+export * from "./ILocationType.interface";

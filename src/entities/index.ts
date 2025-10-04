@@ -16,3 +16,4 @@ export * from "./RequestAssignment";
 export * from "./RequestStatus";
 export * from "./Role";
 export * from "./User";
+export * from "./LocationType";
