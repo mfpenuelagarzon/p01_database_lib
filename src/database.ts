@@ -11,6 +11,7 @@ import { initCountry } from "./entities/Country";
 import { initCreative } from "./entities/Creative";
 import { initCustomerType } from "./entities/CustomerType";
 import { initDeviceType } from "./entities/DeviceType";
+import { initLocationType } from "./entities/LocationType";
 import { initEventLog } from "./entities/EventLog";
 import { initPurchaseType } from "./entities/PurchaseType";
 import { initRequest } from "./entities/Request";
@@ -48,6 +49,7 @@ export class Database {
       initContractType(sequelize);
       initCustomerType(sequelize);
       initDeviceType(sequelize);
+      initLocationType(sequelize);
       initCountry(sequelize);
       initRequestStatus(sequelize);
 

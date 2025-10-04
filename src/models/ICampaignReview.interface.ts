@@ -12,7 +12,7 @@ export interface ICampaignReview {
   created_at: Date;
   updated_at: Date;
   formats: string;
-  location: string;
+  location_type_id: number;
   device_type_id: number;
   conversion: boolean;
   contract_type_id: number;
