@@ -10,7 +10,6 @@ export * from "./Creative";
 export * from "./CustomerType";
 export * from "./DeviceType";
 export * from "./EventLog";
-export * from "./ObjectiveType";
 export * from "./PurchaseType";
 export * from "./Request";
 export * from "./RequestAssignment";

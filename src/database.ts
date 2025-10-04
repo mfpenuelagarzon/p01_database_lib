@@ -12,7 +12,6 @@ import { initCreative } from "./entities/Creative";
 import { initCustomerType } from "./entities/CustomerType";
 import { initDeviceType } from "./entities/DeviceType";
 import { initEventLog } from "./entities/EventLog";
-import { initObjectiveType } from "./entities/ObjectiveType";
 import { initPurchaseType } from "./entities/PurchaseType";
 import { initRequest } from "./entities/Request";
 import { initRequestAssignment } from "./entities/RequestAssignment";
@@ -45,7 +44,6 @@ export class Database {
       initAuthStorage(sequelize);
       initPurchaseType(sequelize);
       initCampaignType(sequelize);
-      initObjectiveType(sequelize);
       initCampaignTypeSp(sequelize);
       initContractType(sequelize);
       initCustomerType(sequelize);

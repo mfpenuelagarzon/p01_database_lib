@@ -1,7 +1,6 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 import { CampaignType } from "./CampaignType";
 import { PurchaseType } from "./PurchaseType";
-import { ObjectiveType } from "./ObjectiveType";
 
 export class CampaignInfo extends Model {}
 
@@ -39,10 +38,6 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
       allowNull: false,
     },
     purchase_type_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    objective_type_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -90,5 +85,4 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
 
   CampaignInfo.belongsTo(CampaignType, {foreignKey: 'campaign_type_id', targetKey: 'id', as: 'CampaignType'});
   CampaignInfo.belongsTo(PurchaseType, {foreignKey: 'purchase_type_id', targetKey: 'id', as: 'PurchaseType'});
-  CampaignInfo.belongsTo(ObjectiveType, {foreignKey: 'objective_type_id', targetKey: 'id', as: 'ObjectiveType'});
 }
