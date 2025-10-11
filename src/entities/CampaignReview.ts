@@ -87,7 +87,7 @@ export const initCampaignReview = (sequelize: Sequelize) => {
     },
     fee: {
       type: DataTypes.DECIMAL,
-      allowNull: false
+      allowNull: true
     },
     publisher_type_id: {
       type: DataTypes.NUMBER,
