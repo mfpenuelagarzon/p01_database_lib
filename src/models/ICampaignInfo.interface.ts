@@ -12,7 +12,7 @@ export interface ICampaignInfo {
   budget: number;
   kpi: number;
   segmentation: string;
-  platform_type_id: string;
+  platform_type_id: number;
   product: string;
   url: string;
   utm: string;
