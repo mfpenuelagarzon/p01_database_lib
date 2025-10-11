@@ -19,6 +19,7 @@ import { initRequestAssignment } from "./entities/RequestAssignment";
 import { initRequestStatus } from "./entities/RequestStatus";
 import { initRole } from "./entities/Role";
 import { initUser } from "./entities/User";
+import {initPlatformType, initPublisherType} from "./entities";
 
 export class Database {
   private static instance: Sequelize;
@@ -52,6 +53,8 @@ export class Database {
       initLocationType(sequelize);
       initCountry(sequelize);
       initRequestStatus(sequelize);
+      initPlatformType(sequelize);
+      initPublisherType(sequelize);
 
       // Dependientes
       initUser(sequelize);

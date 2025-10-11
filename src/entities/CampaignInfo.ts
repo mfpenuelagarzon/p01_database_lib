@@ -1,6 +1,7 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 import { CampaignType } from "./CampaignType";
 import { PurchaseType } from "./PurchaseType";
+import {PlatformType} from "./PlatformType";
 
 export class CampaignInfo extends Model {}
 
@@ -57,8 +58,8 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    platforms: {
-      type: DataTypes.JSON,
+    platform_type_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     product: {
@@ -85,4 +86,5 @@ export const initCampaignInfo = (sequelize: Sequelize) => {
 
   CampaignInfo.belongsTo(CampaignType, {foreignKey: 'campaign_type_id', targetKey: 'id', as: 'CampaignType'});
   CampaignInfo.belongsTo(PurchaseType, {foreignKey: 'purchase_type_id', targetKey: 'id', as: 'PurchaseType'});
+  CampaignInfo.belongsTo(PlatformType, {foreignKey: 'platform_type_id', targetKey: 'id', as: 'PlatformType'});
 }

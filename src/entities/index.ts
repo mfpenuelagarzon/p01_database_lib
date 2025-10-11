@@ -17,3 +17,5 @@ export * from "./RequestStatus";
 export * from "./Role";
 export * from "./User";
 export * from "./LocationType";
+export * from "./PlatformType";
+export * from "./PublisherType";

@@ -4,6 +4,7 @@ import { CustomerType } from "./CustomerType";
 import { DeviceType } from "./DeviceType";
 import { ContractType } from "./ContractType";
 import {LocationType} from "./LocationType";
+import {PublisherType} from "./PublisherType";
 
 export class CampaignReview extends Model {}
 
@@ -80,6 +81,26 @@ export const initCampaignReview = (sequelize: Sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    ecpm: {
+      type: DataTypes.DECIMAL,
+      allowNull: false
+    },
+    fee: {
+      type: DataTypes.DECIMAL,
+      allowNull: false
+    },
+    publisher_type_id: {
+      type: DataTypes.NUMBER,
+      allowNull: false,
+    },
+    campaign_level_2: {
+      type: DataTypes.NUMBER,
+      allowNull: false,
+    },
+    campaign_level_3: {
+      type: DataTypes.NUMBER,
+      allowNull: false,
+    }
   }, { sequelize, modelName: 'CampaignReview', tableName: 'campaign_review', timestamps: false });
 
 
@@ -88,4 +109,5 @@ export const initCampaignReview = (sequelize: Sequelize) => {
   CampaignReview.belongsTo(DeviceType, {foreignKey: 'device_type_id', targetKey: 'id', as: 'DeviceType'});
   CampaignReview.belongsTo(ContractType, {foreignKey: 'contract_type_id', targetKey: 'id', as: 'ContractType'});
   CampaignReview.belongsTo(LocationType, {foreignKey: 'location_type_id', targetKey: 'id', as: 'LocationType'});
+  CampaignReview.belongsTo(PublisherType, {foreignKey: 'publisher_type_id', targetKey: 'id', as: 'PublisherType'});
 }
