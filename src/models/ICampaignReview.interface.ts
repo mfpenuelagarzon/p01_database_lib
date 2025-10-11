@@ -16,4 +16,9 @@ export interface ICampaignReview {
   device_type_id: number;
   conversion: boolean;
   contract_type_id: number;
+  ecpm: number;
+  fee?: number;
+  publisher_type_id: number;
+  campaign_level_2: string;
+  campaign_level_3: string;
 }
