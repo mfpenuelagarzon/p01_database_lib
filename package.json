@@ -1,6 +1,6 @@
 {
   "name": "marketing-request-database-lib",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Librería interna para gestionar conexión y modelos de base de datos con Sequelize ORM & NodeJs + TS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

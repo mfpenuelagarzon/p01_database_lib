@@ -30,12 +30,6 @@ export const initEventLog = (sequelize: Sequelize) => {
         created_at: {
             type: DataTypes.DATE,
             allowNull: false,
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
         }
     }, {sequelize, modelName: 'EventLog', tableName: 'event_log', timestamps: false});
-
-    EventLog.belongsTo(User, {foreignKey: 'user_id', targetKey: 'id', as: 'User'});
 }

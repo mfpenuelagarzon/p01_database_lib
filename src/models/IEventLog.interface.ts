@@ -5,5 +5,4 @@ export interface IEventLog {
   step: string;
   payload: string;
   created_at: Date;
-  user_id: number;
 }
