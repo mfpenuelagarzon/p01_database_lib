@@ -4,5 +4,5 @@ export interface IEventLog {
   milestone: string;
   step: string;
   payload: string;
-  created_at: Date;
+  created_at?: Date;
 }
